@@ -2,7 +2,7 @@ package com.example.demo
 
 
 import org.slf4j.{Logger, LoggerFactory}
-import org.springframework.web.bind.annotation._
+import org.springframework.web.bind.annotation.{PostMapping, _}
 
 @RestController
 class StatController(repo: StatRepository) {
@@ -22,7 +22,7 @@ class StatController(repo: StatRepository) {
   def stat(): Long = {
     log.info("Got stat request")
     val count = repo.count
-    log.info(s"Unique count is $count")
+    log.info(s"Unique user count is $count")
     count
   }
 
