@@ -16,6 +16,7 @@ class StatController(repo: StatRepository) {
       throw new RuntimeException("User id must not be null")
     }
     repo.save(user)
+    repo.flush()
   }
 
   @GetMapping(Array("stat"))

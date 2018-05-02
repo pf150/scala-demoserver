@@ -3,7 +3,7 @@
 
 spring:
   datasource:
-    url: jdbc:h2:file:~/stats
+    url: jdbc:h2:file:/opt/stats/stats
     username: stats
     password: stats
     driver-class-name: org.h2.Driver
